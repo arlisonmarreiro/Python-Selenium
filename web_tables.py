@@ -15,8 +15,8 @@ browser.get(url)
 elemento = browser.find_element(By.CSS_SELECTOR, '[title $="e"]')
 elemento.click()
     
-#browser.find_element(By.ID, 'delete-record-2').click()
-#browser.find_element(By.ID, 'delete-record-3').click()
+browser.find_element(By.ID, 'delete-record-2').click()
+browser.find_element(By.ID, 'delete-record-3').click()
 browser.find_element(By.ID, 'addNewRecordButton').click()
 
 
@@ -35,35 +35,13 @@ dados = {
     'last_name': 'Marreiro',
     'email': 'arlison.marreiro@gmail.com',
     'age':'22',
-    'salary':'500',
-    'department':'whatsapp'
+    'salary':'999999',
+    'department':'##'
 }
 
 preenche_label(browser, **dados)
 
-dados.update({
-    'first_name': 'Thayane',
-    'last_name': 'Ramires',
-    'email': 'thayrmrs@gmail.com',
-    'age': '22',
-    'salary': '500',
-    'department': 'whatsapp'
-})
 
-browser.find_element(By.ID, 'addNewRecordButton').click()
-preenche_label(browser, **dados)
-
-dados.update({
-    'first_name': 'Arlan',
-    'last_name': 'Marreiro',
-    'email': 'arlan.marreiro@gmail.com',
-    'age': '25',
-    'salary': '500',
-    'department': 'whatsapp'
-})
-
-browser.find_element(By.ID, 'addNewRecordButton').click()
-preenche_label(browser, **dados)
 
 
 
